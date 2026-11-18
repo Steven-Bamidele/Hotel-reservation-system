@@ -1,0 +1,385 @@
+/**
+ * CSC 476 Project
+ * Hotel Reservation and Management System (UI Hotels)
+ * Department of Computer Science, University of Ibadan
+ * Lead Developers: Bamidele Steven Oluwadamilare & Lawal Kamaldeen
+ */
+:root {
+  --ui-navy: #002147;
+  --ui-gold: #f2a900;
+  --ui-gold-dark: #d49200;
+  --bg-page: #f4f6f9;
+  --card-white: #ffffff;
+  --text-main: #2d3748;
+  --text-muted: #718096;
+  --border-subtle: #e2e8f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Header & Top Navigation Bar */
+header {
+  background-color: var(--ui-navy);
+  border-bottom: 4px solid var(--ui-gold);
+  padding: 12px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  height: 48px;
+  width: auto;
+  background: white;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.brand-text h1 {
+  font-size: 1.15rem;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.brand-text p {
+  font-size: 0.75rem;
+  color: #cbd5e1;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--ui-gold);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 33, 71, 0.75), rgba(0, 33, 71, 0.75)),
+              url('https://uihotels.uiventureslimited.com/admin/mgt/Rooms_image/0Executive%20suite%20Living%20Room%20Edited.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 70px 20px 90px;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  max-width: 650px;
+  margin: 0 auto;
+  color: #e2e8f0;
+}
+
+/* Availability Search Bar Floating Widget */
+.search-container {
+  max-width: 950px;
+  margin: -45px auto 40px;
+  background: var(--card-white);
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-top: 3px solid var(--ui-gold);
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: var(--ui-navy);
+}
+
+.form-group input, 
+.form-group select {
+  padding: 9px 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+  border-color: var(--ui-navy);
+}
+
+.btn-search {
+  background-color: var(--ui-gold);
+  color: var(--ui-navy);
+  border: none;
+  padding: 11px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-search:hover {
+  background-color: var(--ui-gold-dark);
+}
+
+/* Room Catalog Grid */
+.main-wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 10px 20px 50px;
+}
+
+.heading-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.heading-section h2 {
+  color: var(--ui-navy);
+  font-size: 1.7rem;
+}
+
+.heading-section p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 25px;
+}
+
+.room-card {
+  background: var(--card-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.room-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.room-details {
+  padding: 18px;
+}
+
+.badge {
+  font-size: 0.7rem;
+  font-weight: bold;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.room-details h3 {
+  color: var(--ui-navy);
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.room-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.amenities-list {
+  list-style: none;
+  font-size: 0.82rem;
+  color: #4a5568;
+}
+
+.amenities-list li {
+  margin-bottom: 4px;
+}
+
+.card-footer {
+  padding: 14px 18px;
+  background: #fafbfc;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rate-box {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--ui-navy);
+}
+
+.rate-box span {
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: var(--text-muted);
+}
+
+.btn-book {
+  background-color: var(--ui-navy);
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+
+.btn-book:hover {
+  background-color: #003366;
+}
+
+/* Modal Popup Window for Reservation */
+.modal-overlay {
+  display: none; /* hidden until button clicked */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-box {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 480px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #718096;
+}
+
+.modal-box h3 {
+  color: var(--ui-navy);
+  margin-bottom: 12px;
+  border-bottom: 2px solid var(--ui-gold);
+  padding-bottom: 6px;
+}
+
+.modal-form .form-group {
+  margin-bottom: 12px;
+}
+
+.modal-form input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+}
+
+.cost-summary {
+  background: #f1f5f9;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin: 15px 0;
+}
+
+.btn-submit-booking {
+  width: 100%;
+  background-color: var(--ui-gold);
+  color: var(--ui-navy);
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-submit-booking:hover {
+  background-color: var(--ui-gold-dark);
+}
+
+/* Footer Section */
+footer {
+  background: var(--ui-navy);
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 4px solid var(--ui-gold);
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin-bottom: 5px;
+}

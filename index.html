@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Hotels — University of Ibadan Conference Centre</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Institutional Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand-section">
+        <img src="https://apex.ui.edu.ng/v1/files/3c7166f412e57f6bab5deb603d7137af.png" alt="University of Ibadan Logo" class="brand-logo">
+        <div class="brand-text">
+          <h1>UI HOTELS</h1>
+          <p>University of Ibadan, Ibadan, Nigeria</p>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#accommodations">Accommodations</a></li>
+        <li><a href="#about">About Facility</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="login.php" style="color:var(--ui-gold);">Staff Portal</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Serene Hospitality in the Premier University</h2>
+    <p>Comfortable accommodation within the University of Ibadan Conference Centre complex, Chapel Road.</p>
+  </section>
+
+  <!-- Date Availability Search Bar Widget -->
+  <div class="search-container">
+    <form class="search-form" id="searchWidget">
+      <div class="form-group">
+        <label for="searchCheckin">Check-In Date</label>
+        <input type="date" id="searchCheckin" required>
+      </div>
+      <div class="form-group">
+        <label for="searchCheckout">Check-Out Date</label>
+        <input type="date" id="searchCheckout" required>
+      </div>
+      <div class="form-group">
+        <label for="searchRoomType">Room Category</label>
+        <select id="searchRoomType">
+          <option value="all">All Room Categories</option>
+          <option value="deluxe">Double Room Deluxe</option>
+          <option value="standard">Royal Standard</option>
+          <option value="executive">Royal Executive</option>
+          <option value="suite">Executive Suite</option>
+        </select>
+      </div>
+      <button type="button" class="btn-search" onclick="document.getElementById('accommodations').scrollIntoView({behavior: 'smooth'})">Find Rooms</button>
+    </form>
+  </div>
+
+  <!-- Room Catalog Section -->
+  <main class="main-wrapper" id="accommodations">
+    <div class="heading-section">
+      <h2>Accommodations & Nightly Rates</h2>
+      <p>Browse authentic room classes and reserve your stay</p>
+    </div>
+
+    <div class="room-grid">
+
+      <!-- Room 1: Double Room Deluxe -->
+      <article class="room-card">
+        <img src="https://uihotels.uiventureslimited.com/admin/mgt/Rooms_image/0Double%20Room%20Delux1.JPG" alt="Double Room Deluxe at UI Hotels">
+        <div class="room-details">
+          <span class="badge">5 x 7 Bed</span>
+          <h3>Double Room Deluxe</h3>
+          <p class="room-desc">Ideal for visiting academics, external examiners, and conference participants seeking quiet rest.</p>
+          <ul class="amenities-list">
+            <li>✔ Air Conditioning & Study Desk</li>
+            <li>✔ Sofa & High Definition Television</li>
+            <li>✔ High-Speed University Wi-Fi Access</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <div class="rate-box">₦25,000 <span>/ night</span></div>
+          <button class="btn-book" data-name="Double Room Deluxe" data-price="25000">Reserve Room</button>
+        </div>
+      </article>
+
+      <!-- Room 2: Royal Standard -->
+      <article class="room-card">
+        <img src="https://uihotels.uiventureslimited.com/admin/mgt/Rooms_image/0deluxe%202.jpg" alt="Royal Standard at UI Hotels">
+        <div class="room-details">
+          <span class="badge">6 x 6 Bed</span>
+          <h3>Royal Standard</h3>
+          <p class="room-desc">Equipped with a queen bed, reading lamp, and full personal en-suite bathroom.</p>
+          <ul class="amenities-list">
+            <li>✔ En-suite Bathroom & Water Heater</li>
+            <li>✔ Reading Desk & Study Chair</li>
+            <li>✔ Daily Room Service</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <div class="rate-box">₦28,000 <span>/ night</span></div>
+          <button class="btn-book" data-name="Royal Standard" data-price="28000">Reserve Room</button>
+        </div>
+      </article>
+
+      <!-- Room 3: Royal Executive -->
+      <article class="room-card">
+        <img src="https://uihotels.uiventureslimited.com/admin/mgt/Rooms_image/0Royal%20Executive%203%20Edited.jpg" alt="Royal Executive Room">
+        <div class="room-details">
+          <span class="badge">6 x 7 Bed</span>
+          <h3>Royal Executive</h3>
+          <p class="room-desc">Spacious executive room featuring a mini-refrigerator and personal lounge corner.</p>
+          <ul class="amenities-list">
+            <li>✔ Refrigerator & Mini Lounge</li>
+            <li>✔ Wardrobe & Luggage Rack</li>
+            <li>✔ Complimentary Bottled Water</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <div class="rate-box">₦35,000 <span>/ night</span></div>
+          <button class="btn-book" data-name="Royal Executive" data-price="35000">Reserve Room</button>
+        </div>
+      </article>
+
+      <!-- Room 4: Executive Suite (Living Room) -->
+      <article class="room-card">
+        <img src="https://uihotels.uiventureslimited.com/admin/mgt/Rooms_image/0Executive%20suite%20Living%20Room%20Edited.jpg" alt="Executive Suite Living Room">
+        <div class="room-details">
+          <span class="badge">Suite • Living Room + Bedroom</span>
+          <h3>Executive Suite</h3>
+          <p class="room-desc">Two-room layout complete with a living area, dining counter, and kitchenette.</p>
+          <ul class="amenities-list">
+            <li>✔ Private Living Room & Dining Area</li>
+            <li>✔ Kitchenette with Sink & Microwave</li>
+            <li>✔ Intercom Direct to Reception</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <div class="rate-box">₦60,000 <span>/ night</span></div>
+          <button class="btn-book" data-name="Executive Suite" data-price="60000">Reserve Room</button>
+        </div>
+      </article>
+
+      <!-- Room 5: Premium Royal Suite (Bedroom) -->
+      <article class="room-card">
+        <img src="https://uihotels.uiventureslimited.com/admin/mgt/Rooms_image/0Executive%20Suite%202.jpg" alt="Premium Royal Suite">
+        <div class="room-details">
+          <span class="badge">Suite • Master Bedroom</span>
+          <h3>Premium Royal Suite</h3>
+          <p class="room-desc">Top-tier suite offering maximum privacy, executive furnishings, and VIP hospitality.</p>
+          <ul class="amenities-list">
+            <li>✔ Master King Bed & Dressing Mirror</li>
+            <li>✔ Deluxe Bathroom with Bathtub</li>
+            <li>✔ Access to VIP Lounge</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <div class="rate-box">₦80,000 <span>/ night</span></div>
+          <button class="btn-book" data-name="Premium Royal Suite" data-price="80000">Reserve Room</button>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Interactive JavaScript Reservation Modal -->
+  <div class="modal-overlay" id="reservationModal">
+    <div class="modal-box">
+      <button class="btn-close" aria-label="Close dialog">&times;</button>
+      <h3>Reservation Details</h3>
+      <form class="modal-form" id="clientBookingForm" action="process_booking.php" method="POST">
+  <div class="form-group">
+    <label>Selected Room Class</label>
+    <!-- Give them name="" attributes so PHP can read $_POST -->
+    <input type="text" id="modalRoomName" name="room_name" readonly>
+    <input type="hidden" id="modalRoomRate" name="room_rate">
+    <input type="hidden" id="modalRoomTypeId" name="type_id" value="1">
+  </div>
+  <div class="form-group">
+    <label>Full Name</label>
+    <input type="text" id="guestFullName" name="full_name" required placeholder="e.g. Steven Bamidele">
+  </div>
+  <div class="form-group">
+    <label>Phone Number</label>
+    <input type="tel" id="guestPhone" name="phone" required placeholder="08012345678">
+  </div>
+  <div class="form-group">
+    <label>Email Address</label>
+    <input type="email" id="guestEmail" name="email" required placeholder="guest@example.com">
+  </div>
+  <div class="form-group">
+    <label>Check-in Date</label>
+    <input type="date" id="modalCheckin" name="check_in" required>
+  </div>
+  <div class="form-group">
+    <label>Check-out Date</label>
+    <input type="date" id="modalCheckout" name="check_out" required>
+  </div>
+
+  <div class="cost-summary">
+    <div>Duration: <strong><span id="stayDuration">1 Night(s)</span></strong></div>
+    <div>Total Bill: <strong><span id="stayTotal" style="color:var(--ui-navy);">₦0</span></strong></div>
+  </div>
+
+  <button type="submit" class="btn-submit-booking">Submit Reservation Request</button>
+</form>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer id="contact">
+    <p>&copy; 2026 UI Hotels — University of Ibadan Conference Centre Building, Chapel Road, UI, Ibadan, Nigeria.</p>
+    <p style="color: #cbd5e1;">CSC 476 Project (Hotel Reservation and Management System, Lead Developers: Bamidele Steven Oluwadamilare & Lawal Kamaldeen)</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
